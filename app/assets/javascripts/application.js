@@ -67,7 +67,7 @@ var ColorBox = function(id, timeOffset) {
     //darkened background color for the back
     var currRGB = hexToRgb(this.currColor);
     for(var i = 0; i < currRGB.length; i++) {
-      currRGB[i] -= 50;
+      currRGB[i] -= 0; //Set this value to 50 for more darkenedness.
       if(currRGB[i] < 0) {
         currRGB[i] = 0;
       }
