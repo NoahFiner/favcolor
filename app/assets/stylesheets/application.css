@@ -15,5 +15,64 @@
  */
 
 body {
-  background-color: blue !important;
+  background-color: #5b2a7d;
+  color: white;
+  margin: 0;
+  width: 100%;
+}
+
+* {
+  font-family: "helvetica";
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+p {
+  color: #D4F0D1;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  border-left: 0px solid #fff;
+  padding-left: 3px;
+  margin-top: 3px;
+  transition: border-left 0.25s;
+
+  &:hover {
+    border-left: 10px solid #fff;
+  }
+}
+
+#header-outer {
+  margin: 0;
+  margin-top: -100px;
+  width: 100vw;
+  height: 75px;
+  background-color: black;
+  position: fixed;
+}
+
+#header-outer > * {
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 75px;
+}
+
+#header-logo {
+  color: #94d98e;
+  margin-left: 12.5px;
+  float: left;
+  font-size: 50px;
+  border-bottom: 0px solid #94d98e;
+  transition: border-bottom 0.25s;
+
+  &:hover {
+    border-bottom: 10px solid #94d98e
+  }
 }

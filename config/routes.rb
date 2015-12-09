@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
   root 'static_pages#intro'
-  get 'static_pages/about'
+  get 'about' => 'static_pages#about'
+  get 'credits' => 'static_pages#credits'
+  get 'color_picker' => 'static_pages#color_picker'
+  get 'color_analyzer' => 'static_pages#color_analyzer'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

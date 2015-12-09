@@ -5,4 +5,14 @@ class StaticPagesController < ApplicationController
 
   def about
   end
+
+  def color_analyzer
+  end
+
+  def color_picker
+  end
+
+  def credits
+  end
+  
 end
