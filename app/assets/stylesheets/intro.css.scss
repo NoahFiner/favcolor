@@ -28,6 +28,7 @@ body {
   width: 100vw;
   height: 100vh;
   overflow: hidden;
+  z-index:-1000;
 }
 
 #color-background-inner {
@@ -107,16 +108,63 @@ body {
   overflow: hidden;
 }
 
-#left-corner-background {
+#left-corner-background, #left-corner-background-green,
+#left-corner-background-blue, #left-corner-background-red,
+#left-corner-background-yellow {
   pointer-events: auto;
-  transform: rotate(10deg);
+  transform: rotate(60deg);
   position: absolute;
   height: 300px;
   width: 110vw;
   bottom: -125px;
-  left: -5vw;
-  box-shadow: 0 0 25px rgba(0, 0, 0, 0.5);
-  background-color: #5b2a7d;
+  left: -43vw;
+  z-index: 1;
+  // box-shadow: 0 0 25px rgba(0, 0, 0, 0.5);
+  background-color: black;
+  transition: all 1s, z-index 1ms;
+  transition-delay: 1s;
+}
+
+#left-corner-background-green,
+#left-corner-background-blue, #left-corner-background-red,
+#left-corner-background-yellow {
+}
+
+#left-corner-background-yellow.active {
+  z-index: 4 !important;
+  transform: rotate(61deg);
+  background-color: yellow;
+  bottom: -120px;
+}
+
+#left-corner-background-blue.active {
+  z-index: 3 !important;
+  transform: rotate(62deg);
+  background-color: blue;
+  bottom: -115px;
+}
+
+#left-corner-background-green.active {
+  z-index: 2 !important;
+  transform: rotate(63deg);
+  background-color: green;
+  bottom: -110px;
+}
+
+#left-corner-background-red.active {
+  z-index: 1 !important;
+  transform: rotate(64deg);
+  background-color: red;
+  bottom: -105px;
+}
+
+#left-corner-background {
+  background-color: black !important;
+  z-index:9381;
+}
+
+#left-corner-background.active {
+  opacity: 1;
 }
 
 #left-corner-background > div > * {
@@ -124,12 +172,11 @@ body {
 }
 
 #logo {
-  color: #94d98e;
-  font-size: 100px;
-  font-weight: 500;
-  font-family: "helvetica";
-  text-align: center;
-  left: 6vw;
+  position: absolute;
+  height: 150px;
+  width: auto;
+  left: -14.5vw;
+  top: 100px;
 }
 
 #motto {
@@ -147,27 +194,51 @@ body {
 }
 
 #unrotate {
-  transform: rotate(-10deg);
+  transform: rotate(-60deg);
 }
 
 #left-links {
   position: absolute;
-  left: 40vw;
-  top: 38px;
-  width: 60vw;
+  left: -14.5vw;
+  top: -59px;
+  width: auto;
   height: 100px;
 }
 
 #left-links > a {
-  color: white;
+  color: rgba(255, 255, 255, 0.75);
   text-decoration: none;
   border-left: 0px solid #fff;
   padding-left: 3px;
   display: block;
   margin-top: 3px;
-  transition: border-left 0.25s;
+  transition: border-left 0.25s, color 0.25s;
 
   &:hover {
-    border-left: 10px solid #fff;
+    color: rgba(255, 255, 255, 1);
+  }
+
+  &.favcols:hover {
+    border-left: 10px solid red;
+  }
+
+  &.signup:hover {
+    border-left: 10px solid green;
+  }
+
+  &.login:hover {
+    border-left: 10px solid blue;
+  }
+
+  &.colpick:hover {
+    border-left: 10px solid yellow;
+  }
+
+  &.colan:hover {
+    border-left: 10px solid purple;
+  }
+
+  &.about:hover {
+    border-left: 10px solid gray;
   }
 }

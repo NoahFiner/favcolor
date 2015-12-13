@@ -88,6 +88,13 @@ var ColorBox = function(id, timeOffset) {
 }
 
 $(document).ready(function() {
+  //sick header animation
+  $("#left-corner-background-green, #left-corner-background-red,"
+    + "#left-corner-background-yellow, #left-corner-background-blue,"
+    + "#left-corner-background,"
+    + "#header-yellow, #header-blue, #header-green, #header-red")
+    .addClass("active");
+
   for(var i = 0; i < 200; i++) {
     colorBoxes[i] = new ColorBox(i, Math.random()*10000);
   }

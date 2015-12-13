@@ -1,3 +1,16 @@
 <div id="header-outer">
-  <%= link_to "favicolor", root_path, id: 'header-logo' %>
+  <div id="header-content">
+    <%= link_to image_tag('favicolor.png', id: 'header-logo'), root_path %>
+    <div id="header-right">
+      <%= link_to "favorite colors", '#', class: 'favcols' %>
+      <%= link_to "color picker", color_picker_path, class: 'colpick' %>
+      <%= link_to "color analyzer", color_analyzer_path, class: 'colan' %>
+      <%= link_to "sign up", '#', class: 'signup' %>
+      <%= link_to "log in", '#', class: 'login' %>
+    </div>
+  </div>
+  <div id="header-yellow"></div>
+  <div id="header-green"></div>
+  <div id="header-blue"></div>
+  <div id="header-red"></div>
 </div>

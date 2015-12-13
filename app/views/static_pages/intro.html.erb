@@ -9,19 +9,25 @@
     <div id="text-background">
       <div style="height: 100%; width: 100%; position: relative">
         <div id="left-corner-background">
-          <div id="unrotate" style="height: 100%; width: 100%; position: relative">
-            <h1 id="logo">favicolor</h1>
-            <p id="motto">Everyone's favorite colors,<br>at your demand.</p>
-            <div id="left-links">
-              <%= link_to "favorite colors", '#' %>
-              <%= link_to "sign up", '#' %>
-              <%= link_to "log in", '#' %>
-              <%= link_to "color picker", color_picker_path %>
-              <%= link_to "color analyzer", color_analyzer_path %>
-              <%= link_to "about us", about_path %>
+          <div style="position: absolute; left: 42vw">
+            <div id="unrotate" style="height: 100%; width: 100%; position: relative">
+              <%= image_tag "favicolor.png", id: "logo" %>
+              <!-- <p id="motto">Everyone's favorite colors,<br>at your demand.</p> -->
+              <div id="left-links">
+                <%= link_to "favorite colors", '#', class: 'favcols' %>
+                <%= link_to "sign up", '#', class: 'signup' %>
+                <%= link_to "log in", '#', class: 'login' %>
+                <%= link_to "color picker", color_picker_path, class: 'colpick' %>
+                <%= link_to "color analyzer", color_analyzer_path, class: 'colan' %>
+                <%= link_to "about us", about_path, class: 'about' %>
+              </div>
             </div>
           </div>
         </div>
+        <div id="left-corner-background-yellow"></div>
+        <div id="left-corner-background-green"></div>
+        <div id="left-corner-background-blue"></div>
+        <div id="left-corner-background-red"></div>
       </div>
     </div>
   </div>

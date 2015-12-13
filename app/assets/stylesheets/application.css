@@ -58,21 +58,123 @@ a {
   position: fixed;
 }
 
-#header-outer > * {
+#header-content {
+  position: absolute;
+  background-color: black;
+  transform-origin: 0% 100%;
+  transform: rotate(-0.5deg);
+  width: 100vw;
+  height: 75px;
+  z-index: 4239578293475923784;
+}
+
+#header-yellow, #header-green, #header-blue, #header-red {
+  width: 100vw;
+  height: 75px;
+  position: absolute;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0);
+  transform-origin: 0% 100%;
+  transform: rotate(-0.5deg);
+  bottom: 0px;
+  transition: all 1s, z-index 1ms;
+}
+
+#header-yellow.active {
+  bottom: -1px;
+  z-index: 4 !important;
+  transform: rotate(-0.3deg);
+  background-color: yellow;
+}
+
+#header-blue.active {
+  bottom: -2px;
+  z-index: 3 !important;
+  transform: rotate(-0.1deg);
+  background-color: blue;
+}
+
+#header-green.active {
+  bottom: -3px;
+  z-index: 2 !important;
+  transform: rotate(0.1deg);
+  background-color: green;
+}
+
+#header-red.active {
+  bottom: -4px;
+  z-index: 1 !important;
+  transform: rotate(0.3deg);
+  background-color: red;
+}
+
+
+#header-content > * {
   display: inline-block;
   vertical-align: middle;
   line-height: 75px;
 }
 
 #header-logo {
-  color: #94d98e;
+  opacity: 0.75;
   margin-left: 12.5px;
   float: left;
-  font-size: 50px;
-  border-bottom: 0px solid #94d98e;
-  transition: border-bottom 0.25s;
+  height: 70px;
+  width: auto;
+  transition: opacity 0.25s;
+}
 
-  &:hover {
-    border-bottom: 10px solid #94d98e
-  }
+#header-logo:hover {
+  opacity: 1;
+}
+
+#header-right {
+  display: inline-block;
+  height: 100%;
+  line-height: 75px;
+  transform: rotate(0.5deg);
+  float: right;
+  position: relative;
+}
+
+#header-right > a {
+  display: inline-block;
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 0px;
+  height: 20px;
+  padding-bottom: 42px;
+  vertical-align: top;
+  border-bottom: 0px solid #fff;
+  transition: border-bottom 0.25s, color 0.25s;
+}
+
+#header-right > a:hover {
+  color: rgba(255, 255, 255, 1);
+}
+
+.favcols:hover {
+  border-bottom: 10px solid red !important;
+}
+
+.signup:hover {
+  border-bottom: 10px solid green !important;
+}
+
+.login:hover {
+  border-bottom: 10px solid blue !important;
+}
+
+.colpick:hover {
+  border-bottom: 10px solid yellow !important;
+}
+
+.colan:hover {
+  border-bottom: 10px solid purple !important;
+}
+
+.about:hover {
+  border-bottom: 10px solid gray !important;
 }
