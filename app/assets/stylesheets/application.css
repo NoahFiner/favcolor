@@ -32,10 +32,6 @@ html {
   overflow-x: hidden;
 }
 
-p {
-  color: #D4F0D1;
-}
-
 a {
   color: white;
   text-decoration: none;
@@ -43,83 +39,38 @@ a {
   padding-left: 3px;
   margin-top: 3px;
   transition: border-left 0.25s;
-
-  &:hover {
-    border-left: 10px solid #fff;
-  }
 }
 
 #header-outer {
   margin: 0;
-  margin-top: -100px;
   width: 100vw;
-  height: 75px;
-  background-color: black;
+  height: 50px;
+  background-color: #333;
   position: fixed;
 }
 
 #header-content {
   position: absolute;
-  background-color: black;
+  background-color: #333;
   transform-origin: 0% 100%;
   transform: rotate(-0.5deg);
   width: 100vw;
-  height: 75px;
+  height: 50px;
   z-index: 4239578293475923784;
-}
-
-#header-yellow, #header-green, #header-blue, #header-red {
-  width: 100vw;
-  height: 75px;
-  position: absolute;
-  z-index: 1;
-  background-color: rgba(0, 0, 0, 0);
-  transform-origin: 0% 100%;
-  transform: rotate(-0.5deg);
-  bottom: 0px;
-  transition: all 1s, z-index 1ms;
-}
-
-#header-yellow.active {
-  bottom: -1px;
-  z-index: 4 !important;
-  transform: rotate(-0.3deg);
-  background-color: yellow;
-}
-
-#header-blue.active {
-  bottom: -2px;
-  z-index: 3 !important;
-  transform: rotate(-0.1deg);
-  background-color: blue;
-}
-
-#header-green.active {
-  bottom: -3px;
-  z-index: 2 !important;
-  transform: rotate(0.1deg);
-  background-color: green;
-}
-
-#header-red.active {
-  bottom: -4px;
-  z-index: 1 !important;
-  transform: rotate(0.3deg);
-  background-color: red;
 }
 
 
 #header-content > * {
   display: inline-block;
   vertical-align: middle;
-  line-height: 75px;
+  line-height: 50px;
 }
 
 #header-logo {
   opacity: 0.75;
   margin-left: 12.5px;
   float: left;
-  height: 70px;
+  height: 45px;
   width: auto;
   transition: opacity 0.25s;
 }
@@ -131,7 +82,7 @@ a {
 #header-right {
   display: inline-block;
   height: 100%;
-  line-height: 75px;
+  line-height: 50px;
   transform: rotate(0.5deg);
   float: right;
   position: relative;
@@ -140,15 +91,17 @@ a {
 #header-right > a {
   display: inline-block;
   color: rgba(255, 255, 255, 0.75);
-  font-size: 20px;
+  font-size: 15px;
+  height: 15px;
   margin-left: 10px;
   margin-right: 10px;
-  margin-bottom: 0px;
-  height: 20px;
-  padding-bottom: 42px;
-  vertical-align: top;
+  padding-bottom: 20px;
+  padding-left: 2.5px;
+  padding-right: 2.5px;
+  margin-bottom: -9px;
+  vertical-align: bottom;
   border-bottom: 0px solid #fff;
-  transition: border-bottom 0.25s, color 0.25s;
+  transition: border-bottom 0.25s, margin-bottom 0.25s, color 0.25s;
 }
 
 #header-right > a:hover {
@@ -177,4 +130,10 @@ a {
 
 .about:hover {
   border-bottom: 10px solid gray !important;
+}
+
+#everything {
+  position: absolute;
+  margin-top: 50px;
+  z-index: -1;
 }
