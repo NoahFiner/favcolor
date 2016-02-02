@@ -1,2 +1,21 @@
 <h1>Sign up</h1>
 <p>Join dozens of other users to share your favorite colors!</p>
+<div id="form-outer">
+  <%= form_for(@user) do |f| %>
+    <%= render 'shared/error_messages' %>
+
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+
+    <%= f.label :email %>
+    <%= f.email_field :email %>
+
+    <%= f.label :password %>
+    <%= f.password_field :password %>
+
+    <%= f.label :password_confirmation %>
+    <%= f.password_field :password_confirmation %>
+
+    <%= f.submit "Create account", class: "button" %>
+  <% end %>
+</div>

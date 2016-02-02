@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  get 'users/new'
 
   get 'users/new'
 
@@ -9,6 +8,7 @@ Rails.application.routes.draw do
   get 'color_picker' => 'static_pages#color_picker'
   get 'color_analyzer' => 'static_pages#color_analyzer'
   get 'signup' => 'users#new'
+  resources :users
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

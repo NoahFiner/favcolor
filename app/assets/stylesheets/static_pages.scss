@@ -1,4 +1,4 @@
-h1:first-child {
+h1:first-of-type {
   padding: 40px;
   font-size: 45px;
   background-color: #853DB8;
@@ -16,4 +16,107 @@ p {
 
 h1 {
   color: black;
+}
+
+@mixin box_styling {
+  -moz-box-sizing:    border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing:         border-box;
+}
+
+.debug_dump {
+  color: black;
+  border: 1px solid black;
+  background-color: white;
+  clear: both;
+  float: left;
+  width: 100%;
+  margin-top: 45px;
+  @include box_styling;
+}
+
+#user-info {
+  height: 150px;
+  line-height: 150px;
+  width: 100%;
+}
+
+.gravatar {
+  height: 100px;
+  width: 100px;
+  margin-left: 20px;
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+}
+
+.email {
+  display: inline-block;
+  font-size: 25px;
+  height: 150px;
+  vertical-align: middle;
+}
+
+#form-outer {
+  width: 80%;
+  margin: 50px auto;
+  background-color: #853DB8;
+  padding: 25px;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.25);
+}
+
+input, textarea, select, .uneditable-input {
+  color: black;
+  border: 1px solid #bbb;
+  width: 100%;
+  margin-bottom: 15px;
+  @include box_styling;
+}
+
+.button {
+  cursor: pointer;
+  line-height: 25px;
+  font-size: 15px;
+  border: 0;
+  width: auto;
+  padding: 5px 10px;
+  vertical-align: middle;
+  background-color: #421F5C;
+  outline: 0;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.25);
+  color: white;
+  transition: background-color 0.25s;
+
+  &:hover {
+    background-color: #58297A;
+  }
+}
+
+#error-explanation {
+  color: #7A0000;
+  background-color: #FFADAD;
+  border: 1px solid #FF9999;
+  margin-bottom: 30px;
+  ul {
+    margin: 30px;
+  }
+}
+
+.alert {
+  margin: 10px;
+  line-height: 30px;
+  vertical-align: middle;
+  padding: 10px;
+  font-size: 15px;
+}
+.alert-success {
+  color: #006600;
+  background-color: #D6FFD6;
+  border: 1px solid #C2FFC2;
+}
+
+.alert-failure {
+  color: #7A0000;
+  background-color: #FFADAD;
+  border: 1px solid #FF9999;
 }
