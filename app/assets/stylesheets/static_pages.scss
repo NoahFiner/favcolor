@@ -14,6 +14,14 @@ p {
   padding: 20px;
 }
 
+a {
+  opacity: 0.8;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
 h1 {
   color: black;
 }
@@ -103,20 +111,25 @@ input, textarea, select, .uneditable-input {
 }
 
 .alert {
-  margin: 10px;
   line-height: 30px;
   vertical-align: middle;
-  padding: 10px;
   font-size: 15px;
 }
+
 .alert-success {
   color: #006600;
   background-color: #D6FFD6;
   border: 1px solid #C2FFC2;
 }
 
-.alert-failure {
+.alert-danger {
   color: #7A0000;
-  background-color: #FFADAD;
-  border: 1px solid #FF9999;
+  background-color: #FF5C5C;
+  border: 1px solid #520000;
+}
+
+.alert-neutral {
+  color: #000;
+  background-color: #CCCC00;
+  border: 1px solid #525200;
 }

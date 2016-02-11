@@ -112,11 +112,11 @@ a {
   border-bottom: 10px solid red !important;
 }
 
-.signup:hover {
+.signup:hover, .myaccount:hover {
   border-bottom: 10px solid green !important;
 }
 
-.login:hover {
+.login:hover, .logout:hover {
   border-bottom: 10px solid blue !important;
 }
 

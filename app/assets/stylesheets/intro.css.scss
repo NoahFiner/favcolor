@@ -222,11 +222,11 @@ body {
     border-left: 10px solid red;
   }
 
-  &.signup:hover {
+  &.signup:hover, &.myaccount:hover {
     border-left: 10px solid green;
   }
 
-  &.login:hover {
+  &.login:hover, &.logout:hover {
     border-left: 10px solid blue;
   }
 

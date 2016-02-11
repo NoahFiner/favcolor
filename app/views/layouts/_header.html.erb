@@ -5,8 +5,13 @@
       <%= link_to "favorite colors", '#', class: 'favcols' %>
       <%= link_to "color picker", color_picker_path, class: 'colpick' %>
       <%= link_to "color analyzer", color_analyzer_path, class: 'colan' %>
-      <%= link_to "sign up", signup_path, class: 'signup' %>
-      <%= link_to "log in", '#', class: 'login' %>
+      <% if logged_in? %>
+        <%= link_to "my account", current_user, class: 'myaccount' %>
+        <%= link_to "log out", logout_path, class: 'logout' %>
+      <% else %>
+        <%= link_to "sign up", signup_path, class: 'signup' %>
+        <%= link_to "log in", login_path, class: 'login' %>
+      <% end %>
     </div>
   </div>
 </div>

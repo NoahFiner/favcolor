@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'sessions/new'
+
   get 'users/new'
 
   root 'static_pages#intro'
@@ -8,6 +10,9 @@ Rails.application.routes.draw do
   get 'color_picker' => 'static_pages#color_picker'
   get 'color_analyzer' => 'static_pages#color_analyzer'
   get 'signup' => 'users#new'
+  get 'login' => 'sessions#new'
+  post 'login' => 'sessions#create'
+  delete 'logout' => 'sessions#destroy'
   resources :users
 
   # The priority is based upon order of creation: first created -> highest priority.
