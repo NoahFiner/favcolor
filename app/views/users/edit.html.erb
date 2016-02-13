@@ -1,0 +1,26 @@
+<h1>Edit your profile</h1>
+
+<div id="form-outer">
+  <%= form_for(@user) do |f| %>
+    <%= render "shared/error_messages" %>
+
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+
+    <%= f.label :email %>
+    <%= f.email_field :email %>
+
+    <%= f.label :password %>
+    <%= f.password_field :password %>
+
+    <%= f.label :password_confirmation %>
+    <%= f.password_field :password_confirmation %>
+
+    <div class="gravatar-edit">
+      <%= gravatar_for @user, size: 100 %>
+      <%= link_to "change gravatar", "http://gravatar.com/email", target: "_blank" %>
+    </div>
+
+    <%= f.submit "Save changes", class: "button", style: "margin-top: 20px" %>
+  <% end %>
+</div>

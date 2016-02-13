@@ -45,8 +45,35 @@ h1 {
 
 #user-info {
   height: 150px;
-  line-height: 150px;
-  width: 100%;
+
+  #user-info-text {
+    display: inline-block;
+    font-size: 25px;
+    height: auto;
+
+    a, p {
+      display: block;
+      color: black;
+      font-size: 15px;
+      margin: 10px;
+      height: 15px;
+      padding: 0;
+    }
+  }
+
+  #options-outer {
+    width: 200px;
+    height: auto;
+    margin: 20px;
+    display: block;
+
+    .edit-info {
+      color: black;
+      font-size: 15px;
+      padding: 0;
+      text-align: center;
+    }
+  }
 }
 
 .gravatar {
@@ -54,15 +81,9 @@ h1 {
   width: 100px;
   margin-left: 20px;
   display: inline-block;
+  vertical-align: middle;
   position: relative;
-  vertical-align: middle;
-}
-
-.email {
-  display: inline-block;
-  font-size: 25px;
-  height: 150px;
-  vertical-align: middle;
+  margin-top: 25px;
 }
 
 #form-outer {
@@ -115,6 +136,11 @@ input, textarea, select, .uneditable-input {
   line-height: 30px;
   vertical-align: middle;
   font-size: 15px;
+
+  p {
+    margin-left: 7.5px;
+    padding: 0;
+  }
 }
 
 .alert-success {
@@ -150,4 +176,29 @@ input, textarea, select, .uneditable-input {
   width: auto;
   vertical-align: top;
   margin-top: 6px;
+}
+
+.gravatar-edit {
+  height: 100px;
+  width: auto;
+  display: block;
+  margin-left: 0;
+  padding: 0;
+  line-height: 100px;
+
+  * {
+    vertical-align: middle;
+    display: inline-block;
+  }
+
+  a {
+    margin: 0;
+    padding: 0;
+  }
+
+  img {
+    height: 80px;
+    width: auto;
+    margin: 0;
+  }
 }
