@@ -11,7 +11,8 @@ body {
 
 p {
   color: black;
-  padding: 20px;
+  padding: 0;
+  margin: 0;
 }
 
 a {
@@ -200,5 +201,80 @@ input, textarea, select, .uneditable-input {
     height: 80px;
     width: auto;
     margin: 0;
+  }
+}
+
+.user-outer {
+  height: 75px;
+  display: block;
+  margin: 0;
+  margin-left: 10px;
+  border-bottom: 1px solid #ccc;
+  line-height: 75px;
+
+  img {
+    height: 50px;
+    vertical-align: middle;
+    width: auto;
+    margin: 0;
+    padding: 0;
+  }
+
+  a {
+    color: black;
+    font-size: 15px;
+    vertical-align: middle;
+    margin: 0;
+    padding: 0;
+    margin-left: 10px;
+  }
+}
+
+.pagination {
+  box-shadow: 0 2.5px 2px rgba(0, 0, 0, 0.25);
+  width: auto;
+  display: inline;
+
+
+  * {
+    color: white;
+    margin: 0;
+    padding: 0;
+  }
+
+  a {
+    height: 100%;
+    width: 100%;
+    margin: 5px;
+    padding: 5px;
+    font-size: 10px;
+  }
+
+  li {
+    display: inline-block;
+    background-color: #5B2A7D;
+    margin: 0;
+    border-left: 1px solid #AB75D1;
+    border-right: 1px solid #AB75D1;
+    margin-right: -4.5px;
+    height: 20px;
+    transition: background-color 0.1s;
+
+    &:hover {
+      background-color: #7A38A8;
+    }
+  }
+
+  .disabled {
+    background-color: #C7A3E0;
+    cursor: default;
+    pointer-events: none;
+  }
+
+  .active {
+    background-color: #2C143D;
+    &:hover {
+      background-color: #2C143D;
+    }
   }
 }
