@@ -133,35 +133,6 @@ input, textarea, select, .uneditable-input {
   }
 }
 
-.alert {
-  line-height: 30px;
-  vertical-align: middle;
-  font-size: 15px;
-
-  p {
-    margin-left: 7.5px;
-    padding: 0;
-  }
-}
-
-.alert-success {
-  color: #006600;
-  background-color: #D6FFD6;
-  border: 1px solid #C2FFC2;
-}
-
-.alert-danger {
-  color: #7A0000;
-  background-color: #FF5C5C;
-  border: 1px solid #520000;
-}
-
-.alert-neutral {
-  color: #000;
-  background-color: #CCCC00;
-  border: 1px solid #525200;
-}
-
 .checkbox {
   display: inline-block;
   margin: 5px;

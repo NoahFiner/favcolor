@@ -10,10 +10,12 @@ Rails.application.routes.draw do
   get 'color_picker' => 'static_pages#color_picker'
   get 'color_analyzer' => 'static_pages#color_analyzer'
   get 'signup' => 'users#new'
+  get 'users/:id/resend' => 'users#resend'
   get 'login' => 'sessions#new'
   post 'login' => 'sessions#create'
   delete 'logout' => 'sessions#destroy'
   resources :users
+  resources :account_activation, only: [:edit]
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

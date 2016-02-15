@@ -3,6 +3,8 @@ class UsersController < ApplicationController
   before_action :correct_user, only: [:edit, :update]
   before_action :admin_user, only: :destroy
 
+  include UsersHelper
+
   def index
     @users = User.paginate(page: params[:page])
   end
@@ -33,11 +35,23 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.save
-      flash[:success] = "Welcome to favicolor!"
-      log_in @user
-      redirect_to @user
+      @user.send_account_activation
+      flash[:neutral] = "An email has been sent to your account's address for activation."
+      redirect_to root_url
     else
       render 'new'
+    end
+  end
+
+  def resend
+    @user = User.find(params[:id])
+    if !@user.activated? && @user
+      # @user.send_account_activation
+      # flash[:neutral] = "An email has been sent to your account's address for activation."
+      flash[:danger] = "This feature isn't supported yet, sorry."
+      redirect_to root_url
+    else
+      flash[:danger] = "Account is already activated or doesn't exist!"
     end
   end
 

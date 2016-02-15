@@ -1,0 +1,19 @@
+<style>
+h1:first-of-type {
+  padding: 40px;
+  font-size: 45px;
+  background-color: #853DB8;
+  color: white;
+}
+
+body {
+  background-color: #F6F0FA !important;
+  font-family: helvetica, sans-serif;
+}
+</style>
+
+<h1>Account activation</h1>
+<p>Welcome to favicolor! Click the link below to activate your account.</p>
+<%= link_to "Activate", edit_account_activation_url(@user.activation_token,
+                                                    email: @user.email) %>
+<br><br><br><br><%= image_tag "favicolor.png", style: 'height: 100px; width: auto;' %>
