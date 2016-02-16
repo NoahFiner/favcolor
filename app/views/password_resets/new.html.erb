@@ -1,0 +1,10 @@
+<h1>Reset password</h1>
+
+<div id="form-outer">
+  <%= form_for(:password_reset, url: password_resets_path) do |f| %>
+    <%= f.label :email %>
+    <%= f.email_field :email %>
+
+    <%= f.submit "Send reset email", class: "button" %>
+  <% end %>
+</div>
