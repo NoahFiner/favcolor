@@ -68,4 +68,12 @@ class UserTest < ActiveSupport::TestCase
     assert_not @user.authenticated?(:remember, '')
   end
 
+  # test "associated colors should be destroyed upon destruction" do
+  #   @user.save
+  #   @user.colors.create!(color: "000000", description: "black like my heart")
+  #   assert_difference 'Color.count', -1 do
+  #     @user.destroy
+  #   end
+  # end
+
 end
