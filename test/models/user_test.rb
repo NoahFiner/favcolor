@@ -4,6 +4,8 @@ class UserTest < ActiveSupport::TestCase
   def setup
     @user = User.new(name: "Example Guy", email: "example@example.org",
                     password: "asdfasdf", password_confirmation: "asdfasdf")
+    @user2 = User.new(name: "Other Guy", email: "other@example.org",
+                    password: "asdfasdf", password_confirmation: "asdfasdf")
   end
 
   test "user name should exist" do
@@ -68,12 +70,12 @@ class UserTest < ActiveSupport::TestCase
     assert_not @user.authenticated?(:remember, '')
   end
 
-  # test "associated colors should be destroyed upon destruction" do
-  #   @user.save
-  #   @user.colors.create!(color: "000000", description: "black like my heart")
-  #   assert_difference 'Color.count', -1 do
-  #     @user.destroy
-  #   end
-  # end
+  test "associated colors should be destroyed upon destruction" do
+    @user2.save
+    @user2.colors.create!(hex: "000000", description: "black like my heart")
+    assert_difference 'Color.count', -1 do
+      @user2.destroy
+    end
+  end
 
 end

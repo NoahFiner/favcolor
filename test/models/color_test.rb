@@ -3,7 +3,7 @@ require 'test_helper'
 class ColorTest < ActiveSupport::TestCase
   def setup
     @user = users(:user1)
-    @color = @user.colors.build(color: '000000', description: 'this is a sick color')
+    @color = @user.colors.build(hex: '000000', description: 'this is a sick color')
   end
 
   test "color should be valid" do
@@ -16,26 +16,26 @@ class ColorTest < ActiveSupport::TestCase
   end
 
   test "color should exist" do
-    @color.color = nil
+    @color.hex = nil
     assert_not @color.valid?
   end
 
   test "color should be only 6 characters" do
-    @color.color = "aaaaa"
+    @color.hex = "aaaaa"
     assert_not @color.valid?
-    @color.color = "aaaaaaa"
+    @color.hex = "aaaaaaa"
     assert_not @color.valid?
   end
 
   test "color shouldn't have a hashtag" do
-    @color.color = '#aaaaaa'
+    @color.hex = '#aaaaaa'
     assert_not @color.valid?
   end
 
   test "color should be a valid hex code" do
-    @color.color = "eoisui"
+    @color.hex = "eoisui"
     assert_not @color.valid?
-    @color.color = "aaaaaa"
+    @color.hex = "aaaaaa"
     assert @color.valid?
   end
 

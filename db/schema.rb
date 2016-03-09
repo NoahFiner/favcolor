@@ -11,14 +11,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160221022309) do
+ActiveRecord::Schema.define(version: 20160307002810) do
 
   create_table "colors", force: :cascade do |t|
-    t.string   "color"
+    t.string   "hex"
     t.text     "description"
     t.integer  "user_id"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+    t.string   "rgb"
   end
 
   add_index "colors", ["user_id", "created_at"], name: "index_colors_on_user_id_and_created_at"

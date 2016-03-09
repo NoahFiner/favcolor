@@ -10,3 +10,12 @@
     <% end %>
   </div>
 </div>
+<div id="colors-outer">
+  <% if @user.colors.any? %>
+  <h2>Colors (<%= @user.colors.count %>)</h2>
+  <ol class="colors-list">
+    <%= render @colors %>
+  </ol>
+  <%= will_paginate @colors %>
+  <% end %>
+</div>
