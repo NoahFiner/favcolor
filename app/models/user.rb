@@ -58,6 +58,14 @@ class User < ActiveRecord::Base
     reset_sent_at < 2.hours.ago
   end
 
+  def feed
+    ids = []
+    User.all.each do |u|
+      ids.append(u.id)
+    end
+    Color.where("user_id IN (?)", ids)
+  end
+
   private
 
     def downcase_email

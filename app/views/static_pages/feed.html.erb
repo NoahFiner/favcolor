@@ -1,0 +1,7 @@
+<h1>Recent colors</h1>
+<% if @feed_colors.any? %>
+  <ol class="colors-list">
+    <%= render @feed_colors %>
+  </ol>
+  <%= will_paginate @feed_colors %>
+<% end %>

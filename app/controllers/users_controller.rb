@@ -12,6 +12,7 @@ class UsersController < ApplicationController
   def show
     @user = User.find(params[:id])
     @colors = @user.colors.paginate(page: params[:page])
+    @color = @user.colors.build if logged_in?
   end
 
   def new

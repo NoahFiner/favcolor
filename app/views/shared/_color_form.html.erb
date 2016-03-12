@@ -1,0 +1,21 @@
+<div class="color-form-outer">
+  <%= form_for(@color) do |f| %>
+    <%= render 'shared/error_messages', object: f.object %>
+    <%= f.color_field :hex, class: "color-select-form" %>
+    <%= f.text_area :description, placeholder: "describe your color", class: "color-description-form" %>
+    <div class="color-select-prev">
+      <p id="color-select-hex">#000000</p>
+      <%= f.submit "post me!", class: "button" %>
+    </div>
+  <% end %>
+</div>
+
+<script>
+$(document).ready(function() {
+  $(".color-select-form").change(function() {
+    current_color = $(".color-select-form").val();
+    $("#color-select-hex").html(current_color);
+    $(".color-select-prev").css("background-color", current_color);
+  });
+});
+</script>

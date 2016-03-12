@@ -16,11 +16,13 @@ Rails.application.routes.draw do
   get 'signup' => 'users#new'
   get 'users/:id/resend' => 'users#resend'
   get 'login' => 'sessions#new'
+  get 'feed' => 'static_pages#feed'
   post 'login' => 'sessions#create'
   delete 'logout' => 'sessions#destroy'
   resources :users
   resources :account_activation, only: [:edit]
-  resources :password_resets,     only: [:new, :create, :edit, :update]
+  resources :password_resets,    only: [:new, :create, :edit, :update]
+  resources :colors,         only: [:create, :destroy]
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

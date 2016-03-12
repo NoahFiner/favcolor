@@ -7,6 +7,13 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <div id="popups-outer">
+    <div id="popups-outer-fixed">
+      <div style="width:100%;height:100%;position:relative">
+        <p id="popup-close">x</p>
+      </div>
+    </div>
+  </div>
   <%= render 'layouts/header' %>
   <div id="everything">
     <% flash.each do |message_type, message| %>

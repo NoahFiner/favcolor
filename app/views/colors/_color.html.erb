@@ -8,5 +8,8 @@
   <div class="color-info">
     <span class="color-user"><%= color.user.name %></span>
     <span class="color-desc"><%= color.description %></span>
+    <% if current_user == @user %>
+      <%= link_to "delete", color, method: :delete, class: "color-delete", data: {confirm: 'Delete #' + color.hex + '?'} %>
+    <% end %>
   </div>
 </li>
